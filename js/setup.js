@@ -28,11 +28,11 @@ var generateWizards = function () {
   var wizards = [];
 
   for (var i = 0; i < WIZARD_AMOUNT; i++) {
-    wizards[i] = {
+    wizards.push({
       name: wizardSetup.WIZARD_NAMES[getRandomElement(wizardSetup.WIZARD_NAMES)] + ' ' + wizardSetup.WIZARD_SURNAMES[getRandomElement(wizardSetup.WIZARD_SURNAMES)],
       coatColor: wizardSetup.COAT_COLORS[getRandomElement(wizardSetup.COAT_COLORS)],
       eyesColor: wizardSetup.EYES_COLORS[getRandomElement(wizardSetup.EYES_COLORS)]
-    };
+    });
   }
   return wizards;
 };
