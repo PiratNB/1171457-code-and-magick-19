@@ -34,9 +34,12 @@ var wizardSetup = {
 
 // Открытие и закрытие попапа
 var onPopupEscPress = function (evt) {
-  if (evt.key === ESC_KEY) {
+  if (userNameInput === document.activeElement) {
+    return evt;
+  } else if (evt.key === ESC_KEY) {
     closePopup();
   }
+  return false;
 };
 
 var openPopup = function () {
